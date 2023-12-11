@@ -1,0 +1,60 @@
+import random
+
+print(" ")
+print("¡Bienvenido al juego de adivinar la palabra!")
+print("Tendrás 5 intentos, pista: son animales :).")
+print(" ")
+
+palabras = [ "gato", "perro", "pato", "caballo", "rata", "vaca", "conejo", 
+"oveja", "koala", "elefante", "tigre", "jirafa", "rinoceronte", "oso", "cocodrilo", "cebra", "gorila", "huron", "serpiente", "lobo", "codorniz", "panda" ]
+
+palabra_secreta = random.choice(palabras)
+
+espacios = "_" * len(palabra_secreta)
+
+print(" ")
+print ("¡Buena suerte! uwu")
+print(espacios)
+print(" ")
+
+intentos = 5
+letras_ingresadas = []
+while intentos > 0:
+  print(" ")
+  letra = input("Ingresa una letra: ").lower()
+  print(" ")
+
+  if letra in letras_ingresadas:
+      print(" ")
+      print("¡Ya ingresaste esa letra! Por favor, ingresa una letra diferente. >:(")
+      print(" ")
+      continue
+
+  letras_ingresadas.append(letra)
+  
+  if letra in palabra_secreta:
+    espacios = "".join(letra if letra_adivinada == letra else espacio for letra_adivinada, espacio in zip(palabra_secreta, espacios))
+    print("¡Muy bien! :D")
+    print(espacios)
+
+    if espacios == palabra_secreta:
+      print(" ")
+      print("¡Felicidades! ¡Adivinaste la palabra correctamente! \^o^/ ")
+      print(" ")
+      exit()
+    
+  else:
+    
+    print("¡Lo siento! u.u")
+    intentos -= 1
+    print("Te quedan", str(intentos), "intentos.")
+    print(" ")
+    print(espacios)
+      
+
+if intentos == 0:
+  print(" ")
+  print("¡Game over! x.x")
+  print(" ")
+  exit()
+  
