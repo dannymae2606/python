@@ -1,0 +1,187 @@
+import time
+
+#welcome message
+print("Do you know what is the zen of python?")
+user_option = input("Yes or No  ").lower()
+print("") 
+
+#set timer
+def timer():
+  time.sleep(1)
+
+def large_timer():
+  time.sleep(6)
+  
+#exit message
+def dont_know_more():
+    print("Ok, bye (:")
+    timer()
+    exit()
+
+#zen python explication
+def know_more():
+
+  print('''
+  Beautiful is better than ugly:
+  Advocates aesthetics and elegance in code rather than confusing or unattractive 
+  solutions.''')
+  print("")
+  large_timer()
+
+  print('''
+  Explicit is better than implicit:
+  Favors clarity in writing code, avoiding excessive reliance on inference or magic.''')
+  print("")
+  large_timer()
+
+  print('''
+  Simple is better than complex:
+  Leans toward simple and straightforward solutions rather than complicated and 
+  difficult to understand. ''')
+  print("")
+  large_timer()
+
+  print(''' 
+  Complex is better than complicated:
+  If complexity is necessary, make it clear and understandable rather than confusing 
+  and convoluted. ''')
+  print("")
+  large_timer()
+
+  print('''
+  Flat is better than nested:
+  Advocate flatter, less nested code structures, which improves readability.''')
+  print("")
+  large_timer()
+
+  print('''
+  Sparse is better than dense:
+  Prefer spaced, readable code rather than concentrated, hard-to-read code.''')
+  print("")
+  large_timer()
+
+  print('''
+  Readability counts:
+  Code clarity and understandability are critical for readability and 
+  maintainability.)''')
+  print("")
+  large_timer()
+
+  print('''
+  Special cases are not special enough to break the rules:
+  Emphasizes the importance of following the general rules of the code even in 
+  exceptional situations.''')
+  print("")
+  large_timer()
+
+  print('''
+  Although practicality trumps purity:
+  While it is important to follow good practices, practicality and real-world 
+  utility take precedence.''')
+  print("")
+  large_timer()
+
+  print('''
+  Errors should never pass silently, unless they are explicitly silenced:
+  Errors and exceptions should be handled properly and not ignored without explicit 
+  reason.''')
+  print("")
+  large_timer()
+
+  print('''
+  In the face of ambiguity, reject the temptation to guess:
+  In ambiguous situations, it is best not to make assumptions and follow clear 
+  principles. ''')
+  print("")
+  large_timer()
+
+  print('''
+  There should be one, and preferably only one, obvious way to do it:
+  Favor simplicity and consistency by encouraging a single, clear, preferred way to 
+  perform a task.''')
+  print("")
+  large_timer()
+
+  print('''
+  Although that way may not be obvious at first unless you're Dutch:
+  Refers to Python's creator, Guido van Rossum, who is of Dutch nationality and 
+  often has specific ideas about the elegance of code.''')
+  print("")
+  large_timer()
+
+  print('''
+  Now is better than never, although never is often better than "just now".
+  Stresses the importance of making careful, thoughtful decisions rather than 
+  rushing without consideration.''')
+  print("")
+  large_timer()
+
+  print('''
+  If implementation is hard to explain, it's a bad idea. If the 
+  implementation is easy to explain, it may be a good idea:
+  Suggests that clarity in explaining an implementation is an indicator of its 
+  quality.''')
+  print("")
+  large_timer()
+
+  print('''
+  Namespaces are a great idea, let's do more of that!:
+  Supports the idea of using namespaces to avoid name conflicts and improve code 
+  modularity.''')
+  
+  print("")
+  print("")
+  print("It is all, bye ヾ(•ω•`)o")
+  
+#principal python definition
+def python_zen():
+  python_zen_text = '''
+  The Zen of Python, by Tim Peters.
+  Beautiful is better than ugly.
+  Explicit is better than implicit.
+  Simple is better than complex.
+  Complex is better than complicated.
+  Flat is better than nested.
+  Sparse is better than dense.
+  Readability counts.
+  Special cases aren't special enough to break the rules.
+  Although practicality beats purity.
+  Errors should never pass silently.
+  Unless explicitly silenced.
+  In the face of ambiguity, refuse the temptation to guess.
+  There should be one-- and preferably only one --obvious way to do it.
+  Although that way may not be obvious at first unless you're Dutch.
+  Now is better than never.
+  Although never is often better than *right* now.
+  If the implementation is hard to explain, it's a bad idea.
+  If the implementation is easy to explain, it may be a good idea.
+  Namespaces are one honking great idea -- let's do more of those!
+  
+  '''
+  print(python_zen_text)
+  timer()
+
+
+def want_more():  
+  print("Do you want to know more?  ") 
+  more_info_choice= input("Yes or No  ").lower()
+
+  if more_info_choice == "yes" or more_info_choice == "y":
+    know_more()
+  elif more_info_choice == "no" or more_info_choice == "n":
+    dont_know_more()
+
+
+  
+if user_option  == "yes" or user_option == "y":
+  print ("Perfect! (:")
+  timer()
+  want_more()
+
+elif user_option == "no" or user_option == "n":
+  print("You should >:( ")
+  timer()
+  python_zen()
+  timer()
+  want_more()
+  
